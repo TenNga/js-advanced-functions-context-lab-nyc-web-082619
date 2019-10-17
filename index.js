@@ -55,14 +55,14 @@ function wagesEarnedOnDate(record, dateStamp) {
   return hoursWorkedOnDate(record,dateStamp) * record.payPerHour;
 }
 
-function allWagesFor(record) {
-  let totalWages = 0;
-  record.timeInEvents.forEach((timeIn)=>{
-       totalWages += wagesEarnedOnDate(record,timeIn.date);
-       //console.log("Total Wages: ===================================="+totalWages)
-  })
-  return totalWages;
-}
+// function allWagesFor(record) {
+//   let totalWages = 0;
+//   record.timeInEvents.forEach((timeIn)=>{
+//       totalWages += wagesEarnedOnDate(record,timeIn.date);
+//       //console.log("Total Wages: ===================================="+totalWages)
+//   })
+//   return totalWages;
+// }
 
 function findEmployeeByFirstName(arr,firstName) {
   return arr.find((employee)=>{
