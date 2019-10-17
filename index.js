@@ -73,7 +73,7 @@ function findEmployeeByFirstName(arr,firstName) {
 function calculatePayroll(arr) {
   let totalWages = 0;
   arr.forEach((employee)=>{
-    totalWages += allWagesFor(employee);
+    totalWages += allWagesFor.call(this,employee);
   })
   return totalWages;
 }
