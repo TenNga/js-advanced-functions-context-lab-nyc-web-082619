@@ -18,7 +18,6 @@ function createEmployeeRecords(arrOfArr) {
 }
 
 function createTimeInEvent(dateStamp) {
-  console.log("dateStamp: "+dateStamp)
   const fullDate = dateStamp.split(" ");
   console.log("fullDate: "+fullDate)
   const date =  fullDate[0];
