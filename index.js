@@ -28,6 +28,7 @@ function createTimeInEvent(dateStamp) {
     hour : parseInt(time),
     date : date
   };
+  console.log("returnnnnn: "+info)
   return info
 }
 
