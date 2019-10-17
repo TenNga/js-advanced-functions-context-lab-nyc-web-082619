@@ -28,8 +28,8 @@ function createTimeInEvent(dateStamp) {
     hour : parseInt(time),
     date : date
   };
-  console.log("returnnnnn: "+info)
-  return info
+  this.timeInEvents.push(info)
+  return this
 }
 
 function createTimeOutEvent(record,dateStamp){
