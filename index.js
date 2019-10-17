@@ -26,7 +26,7 @@ function createTimeInEvent(dateStamp) {
     hour : parseInt(time),
     date : date
   };
-  record.timeInEvents.push(info);
+  return info
 
 }
 
