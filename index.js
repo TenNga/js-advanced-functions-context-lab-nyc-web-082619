@@ -52,7 +52,7 @@ function hoursWorkedOnDate(dateStamp) {
 }
 
 function wagesEarnedOnDate(dateStamp) {
-  return hoursWorkedOnDate(dateStamp).call(this) * this.payPerHour;
+  return hoursWorkedOnDate.call(this,dateStamp) * this.payPerHour;
 }
 
 // function allWagesFor(record) {
