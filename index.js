@@ -30,7 +30,7 @@ function createTimeInEvent(dateStamp) {
   return this
 }
 
-function createTimeOutEvent(record,dateStamp){
+function createTimeOutEvent(dateStamp){
   const fullDate = dateStamp.split(" ");
   const date =  fullDate[0];
   const time = fullDate[1];
@@ -39,20 +39,20 @@ function createTimeOutEvent(record,dateStamp){
     hour : parseInt(time),
     date : date
   };
-  record.timeOutEvents.push(info);
-  return record;
+  this.timeOutEvents.push(info);
+  return this;
 }
 
-function hoursWorkedOnDate(record, dateStamp) {
+function hoursWorkedOnDate(dateStamp) {
   let hoursWorked = 0;
-  const dayIn =record.timeInEvents.find((date) => {return date.date === dateStamp});
-  const dayOut = record.timeOutEvents.find((date) =>{return date.date === dateStamp});
+  const dayIn =this.timeInEvents.find((date) => {return date.date === dateStamp});
+  const dayOut = this.timeOutEvents.find((date) =>{return date.date === dateStamp});
   hoursWorked = (dayOut.hour - dayIn.hour)/100;
   return hoursWorked;
 }
 
-function wagesEarnedOnDate(record, dateStamp) {
-  return hoursWorkedOnDate(record,dateStamp) * record.payPerHour;
+function wagesEarnedOnDate(dateStamp) {
+  return hoursWorkedOnDate(dateStamp) * this.payPerHour;
 }
 
 // function allWagesFor(record) {
