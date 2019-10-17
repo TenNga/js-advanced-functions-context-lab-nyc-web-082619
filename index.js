@@ -18,7 +18,9 @@ function createEmployeeRecords(arrOfArr) {
 }
 
 function createTimeInEvent(dateStamp) {
+  console.log("dateStamp: "+dateStamp)
   const fullDate = dateStamp.split(" ");
+  console.log("fullDate: "+fullDate)
   const date =  fullDate[0];
   const time = fullDate[1];
   const info = {
@@ -27,7 +29,6 @@ function createTimeInEvent(dateStamp) {
     date : date
   };
   return info
-
 }
 
 function createTimeOutEvent(record,dateStamp){
