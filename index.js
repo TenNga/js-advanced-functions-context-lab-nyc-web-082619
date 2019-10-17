@@ -27,7 +27,7 @@ function createTimeInEvent(dateStamp) {
     date : date
   };
   record.timeInEvents.push(info);
-  return record;
+
 }
 
 function createTimeOutEvent(record,dateStamp){
