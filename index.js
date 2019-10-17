@@ -70,9 +70,16 @@ function findEmployeeByFirstName(arr,firstName) {
   })
 }
 
-function calculatePayroll() {
-  return allWagesFor.call(this);
+function calculatePayroll(arr) {
+  let totalWages = 0;
+  arr.forEach((employee)=>{
+    totalWages += allWagesFor.call(employee);
+  })
+  return totalWages;
 }
+
+
+
 
 
 /*
